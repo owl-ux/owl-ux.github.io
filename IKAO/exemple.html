@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ikao - Ikéa, mais en mieux !</title>
+    <meta charset="UTF-8">
+
+    <link href="css/normalize.css" rel="stylesheet" type="text/css" />
+    <link href="css/styles.css" rel="stylesheet" type="text/css" />
+
+    <!--montserrat google font avec les variantes -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700" rel="stylesheet">
+
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, width=device-width" />
+
+</head>
+<body>
+	<!--
+
+		Comment commencer une page HTML ?
+		- établir un postulat de notre page :
+			-> quels sont les éléments dont je dispose,
+			-> y a t-il des éléments récurrents (type de liens, styles de titres, etc)
+			-> Organiser une hierarchie logique du document : prioriser l'importance des éléments
+		- Commencer le code HTML :
+			-> Etablir un squelette souple (uniquement les grandes zones dans un 1er temps)
+			-> Remplir chaque zone de manière de plus en plus précise, et construire le Css en parralèlle
+			-> Aller à l'essentiel (intégration Grosse maille), puis affiner chaque zones / éléments
+			-> Chaque élément ne doit pas géner le reste de la page
+		- Affiner l'intégration et le rendu
+			-> Garder la maquette sous les yeux au maximum
+			-> Affiner les tailles de typos, écarts, espaces, etc
+			-> Ajouter des éléments HTML si besoin uniquement pour la mise en page
+			-> Objectif : Avoir l'HTML le plus propre possible (c'est à dire le plus logique et le moins verbeux possible)
+
+		Bonus : la class "container" =>
+			peut servir a mettre un centrer un element structurant ;
+				.container{
+					max-width: 1200px; /* boite 1200px max centrée */
+					margin: 0 auto; /* centrage horizontal d'un display block */
+					padding-left: 10px;
+					padding-right: 10px;
+				}
+
+		Optimisation CSS :
+		- Syntaxe BEM pour le nommage des classes : essayer d'etre cohérent niveau marquage et styles
+        - DRY (dont repeat yourself) => mutualisez votre code CSS
+	-->
+
+	<header>
+		<div class="pre-header">
+			<div class="container">
+				<nav class="pre-header__coords">
+					<a class="button-primary" href="tel:065855256">
+						<img src="icones/icones-svg/phone-receiver.svg" alt="">0652181594
+					</a>
+					<a class="button-primary button-primary--transparent"  href="mailto:info@ikao.fr">
+						<img src="icones/icones-svg/mail.svg" alt="">info@ikao.fr
+					</a>
+				</nav>
+				<!-- mon compte -->
+				<nav class="pre-header__account">
+					<button class="button-primary">Mon Compte</button>
+				</nav>
+			</div>
+		</div>
+
+		<div class="container main-header" id="main-header">
+			<!-- logo -->
+			<img src="images/logos/logo.png">
+			<!-- menu -->
+			<nav class="main-header__menu">
+				<ul>
+					<li><a href="accueil.html">Accueil</a></li>
+					<li><a href="produits.html">Produits</a></li>
+					<li><a href="apropos.html">A propos</a></li>
+					<li><a href="blog.html">Blog</a></li>
+					<li><a href="contact.html">Contact</a></li>
+					<li><a href="rechercher.html"><img src="./icones/icones-png/magnifying-glass.png"></img></a></li>
+					<li><a href="panier.html"><img src="./icones/icones-png/paper-bag.png"></img></a></li>
+				</ul>
+				<div class="panier">
+					<p>Panier</p>
+					<p>3 produits 74.00€</p>
+				</div>
+			</nav>
+
+			<!-- recherche ici pas besoin de formulaire (on a pas de zone de saisie) -->
+
+			<!-- panier -->
+
+		</div>
+	</header>
+
+
+	<main class="homepage container">
+
+		<section class="products-grid">
+			<!-- ma grille de produits -->
+			<!-- chaque item sera composé de :
+				- 1 lien
+				- 1 image (ou background)
+				- 1 texte (stylisé de manière différentes selon les cas)
+			-->
+			<div class="el1">
+				<div class="el1txt">
+					<p>Idees design 2017</p>
+				</div>
+				<div class="el1txt_1">
+					<p>Nouvelle</p>
+					<p>Collection</p>
+				</div>
+				<div class="el1txt_2">
+					<p>Votre intérieur sera le plus beau <br /> Même à la TV c'est pas si beau ! </p>
+				</div>
+				<div class="el1txt_3">
+					<p>79.00 €</p>
+				</div>
+			</div>
+
+			<div class="el2">
+				<div class="el2txt">
+					<p>Canape - Fauteuil</p>
+				</div>
+				<div class="el2txt_1">
+					<p>Canapé 3 places <br /> en cuir</p>
+				</div>
+				<div class="el2txt_2">
+					<p>Acheter ></p>
+				</div>
+				<div class="el2txt_3">
+					<p>659.00 €</p>
+					<p>499.00 €</p>
+				</div>
+			</div>
+
+			<div class="el3">
+				<div class="el3txt">
+					<p>Banc Blanc</p>
+					<p>Avec coussins</p>
+				</div>
+				<div class="el3txt_1">
+					<p>99.00 €</p>
+				</div>
+				<div class="el3txt_2">
+					<p>Acheter</p>
+				</div>
+			</div>
+
+			<div class="el4">
+				<div class="el4txt">
+					<p>Chaise et <br />Accourdoirs</p>
+				</div>
+				<div class="el4txt_1">
+					<p>129.00 €</p>
+					<p>99.00 €</p>
+				</div>
+				<div class="el4txt_2">
+					<p>Vite j'en profite ></p>
+				</div>
+			</div>
+
+			<div class="el5">
+				<div class="el5txt">
+					<p>Chaises</p>
+					<p>Zio Dining</p>
+				</div>
+				<div class="el5txt_1">
+					<p>Acheter ></p>
+				</div>
+			</div>
+
+			<div class="el6">
+				<div class="el6txt">
+					<p>Lampes / accessoires</p>
+				</div>
+				<div class="el6txt_1">
+					<p>Totem floor</p>
+				</div>
+				<div class="el6txt_2">
+					<p>Acheter ></p>
+				</div>
+			</div>
+
+			<div class="el7">
+				<div class="el7txt">
+					<p>Prix design 2017 - Bar</p>
+				</div>
+				<div class="el7txt_1">
+					<p>Tissu rembourré</p>
+					<p>Cool le Tabouret</p>
+				</div>
+				<div class="el7txt_2">
+					<p>Vos fesses n'auront jamais eu autant d'amour...</p>
+				</div>
+			</div>
+		
+		</section>
+
+		<section class="products-selection">
+			<!-- en ce moment, recents, meilleures ventes ... -->
+			<nav class="products-selection__header">
+				<p>En ce moment</p>
+				<div class="nobold"><p>|</p></div>
+				<div class="changecolor"><p>Recents</p></div>
+				<div class="nobold"><p>|</p></div>
+				<div class="changecolor"><p>Meilleures ventes</p></div>
+			</nav>
+
+			<div class="products-list">
+				<ul>
+					<li>
+						<div class="images1">
+							<p></p>
+						</div>
+						<div>
+							<p>Bombi Chair</p>
+							<p>399,00€</p>
+						</div>
+					</li>
+	
+					<li>
+						<div class ="images2">
+							<p></p>
+						</div>
+						<div>
+							<p>Marvelous Seater</p>
+							<p>599,00€</p>
+						</div>
+					</li>
+	
+					<li>
+						<div class ="images3">
+							<p>-15%</p>
+						</div>
+						<div>
+							<p>Chair armrests</p>
+							<p>200,00€</p>
+						</div>
+					</li>
+	
+					<li>
+						<div class="images4">
+							<p></p>
+						</div>
+						<div>
+							<p>Bombi Chair new version</p>
+							<p>399,00€</p>
+						</div>
+					</li>
+				</ul>	
+				
+			</div>
+
+		</section>
+
+
+		<section class="categories">
+			<!-- horloge -->
+			<!-- table basse -->
+			<!-- lampes -->
+			<ul>
+				<li>
+					<!--<img src="images/meubles/horloges.png">-->
+					<div class="imagesmeubles">
+						<div class="txtmeubles1">
+						<p>Décoration</p>
+						<p>Horloges</p>
+					</div>
+					<div class="txtmeubles1_1">
+						<p>Voir </p>
+					</div>
+					</div>
+				</li>
+
+				<li>
+					<div class="imagesmeubles2">
+						<div class="txtmeubles2">
+						<p>Table basses</p>
+						<p>Palettes paillettes</p>
+					</div>
+					<div class="txtmeubles2_2">
+						<p>Voir </p>
+					</div>
+					</div>
+				</li>
+
+				<li>
+					<div class="imagesmeubles3">
+						<div class="txtmeubles3">
+						<p>Lampes</p>
+						<p>Que la lumière soit</p>
+					</div>
+					<div class="txtmeubles3_3">
+						<p>Voir </p>
+					</div>
+					</div>
+				</li>
+			</ul>
+		</section>
+
+		<section class="best-products">
+			<!-- meilleures ventes -->
+			<div class="s-titre2">Meilleures ventes</div>
+			<ul>
+				<li>
+					<img src="images/meubles/puffchair.jpg">
+					<p>Puff Chair</p>
+					<p>287,00€</p>
+				</li>
+
+				<li>
+					<img src="images/meubles/daddychair.jpeg">
+					<p>Daddy Chair</p>
+					<p>399,00€</p>
+				</li>
+
+				<li>
+					<img src="images/meubles/woodchair.jpg">
+					<p>Wood Chair</p>
+					<p>198,00€</p>
+				</li>
+
+				<li>
+					<img src="images/meubles/cheerschair.png">
+					<p>Cheers Chair</p>
+					<p>200,00€</p>
+				</li>
+
+				<li>
+					<img src="images/meubles/loiretchair.jpg">
+					<p>Loiret Chair</p>
+					<p>200,00€</p>
+				</li>
+			</ul>	
+		</section>
+
+	</main>
+
+
+	<!--footer -->
+	<div class="partners container">
+		<!-- logos des partenaires (suedois mais pas que) -->
+		<div class="s-titre">Suedois et pas que...</div>
+		
+		<div class="img-part">
+			<img src="images/logos/logo1.jpg">
+			<img src="images/logos/logo2.jpg">
+			<img src="images/logos/logo3.jpg">
+			<img src="images/logos/logo4.jpg">
+			<img src="images/logos/logo5.jpg">
+			<img src="images/logos/logo6.jpg">
+		</div>
+	</div>
+
+	<footer>
+		<div class="container">
+			<div class="advantages-footer">
+				<!-- livraison offerte, support, carte cadeaux, etc -->
+				<ul class="foot1">
+					<li>
+						<img src="icones/icones-png/plane.png">
+						<div class="paraph">
+							<p>Livraison offerte</p><p>Pour toute commande</p>
+						</div>
+					</li>
+
+					<li>
+						<img src="icones/icones-png/help-lifeguard-symbol.png">
+						<div class="paraph">
+						<p>Support 24/7</p><p>Un problème ? Pas de problème</p>
+						</div>
+					</li>
+
+					<li>
+						<img src="icones/icones-png/dropbox-logo.png">
+						<div class="paraph">
+						<p>Carte cadeaux</p><p>Pour faire plaisir</p>
+						</div>
+					</li>
+
+					<li>
+						<img src="icones/icones-png/paper-bill.png">
+						<div class="paraph">
+						<p>Securite</p><p>Paiment 100% sécurisé</p>
+						</div>
+					</li>
+					
+				</ul>
+			</div>
+
+			<div class="barre">
+			<span></span>
+			</div>
+
+			<div class="main-footer">
+				<!-- liens, logo, newsletter etc -->
+				<div class="company-footer">
+					<ul>
+						<li><img src="images/logos/logo.png"></img></li>
+						<li><p>Les meubles Ikea, mais en mieux</p></li>
+						<div class="espace"><li><p>Quelque part en France, près de Lens</p></li></div>
+						<li><p>+330303030303</p></li>
+						<li><p>info@ikao.com</p></li>
+					</ul>
+				</div>
+				<div class="menu-footer">
+					<ul>
+						<li>Categories</li>
+						<li>Chaises</li>
+						<li>Canapé</li>
+						<li>Salon</li>
+						<li>Chambres</li>
+						<li>Tables</li>
+						<li>Nouveautés</li>
+					</ul>
+				</div>
+				<div class="menu-footer">
+					<ul>
+						<li>Informations</li>
+						<li>A propos</li>
+						<li>Contact</li>
+						<li>Conditions</li>
+						<li>Service client</li>
+						<li>FAQs</li>
+					</ul>
+				</div>
+				<div class="menu-footer">
+					<ul>
+						<li>Compte</li>
+						<li>Mon compte</li>
+						<li>Mes commandes</li>
+						<li>Panier</li>
+						<li>Paiement sécurisé</li>
+					</ul>
+				</div>
+				<div class="newss">
+					<div class="newsletter-footer">
+						<label name="email" id="news1">Newsletter</label>
+						<div>
+							<input type="email" id="email" name="email" placeholder="Votre e-mail">
+							<input type="button" id="bouton" name="bouton" value="souscrire">
+						</div>
+					</div>
+					<div class="follow">
+						<label name="suivre" id="news2">Nous suivre</label>
+						<div>
+							<img src="icones/icones-png/twitter-logo-silhouette.png">
+							<img src="icones/icones-png/facebook-logo.png">
+							<img src="icones/icones-png/google-plus.png">
+							<img src="icones/icones-png/youtube-logo.png">
+							<img src="icones/icones-png/linkedin-logo.png">
+							<img src="icones/icones-png/whatsapp.png">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<div class="sub-footer">
+		<div class="container container-footer">
+			<!-- copyright, logos paiement -->
+			<div class="sub-footer__copyright">
+				©  <div>Ikao.com</div> - tout droits réservés
+			</div>
+
+			<div class="sub-footer__payments">
+				<img src="icones/icones-png/visa-pay-logo.png">
+				<img src="icones/icones-png/paypal-logo.png">
+				<img src="icones/icones-png/mastercard.png">
+				<img src="icones/icones-png/discover-logo-of-pay-system.png">
+				<img src="icones/icones-png/amazon.png">
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>

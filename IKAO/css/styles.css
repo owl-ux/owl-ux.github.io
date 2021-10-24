@@ -1,0 +1,914 @@
+/*--------------------*/
+/*-------GLOBAL-------*/
+/*--------------------*/
+
+@font-face {
+  font-family: Montserrat;
+  src: url("https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700");
+}
+
+* {
+  font-family: Montserrat;
+}
+
+.container{
+    max-width: 1400px; /* boite 1200px max centrée */
+    margin: 0 auto; /* centrage horizontal d'un display block */
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.button-primary {
+  align-items: center;
+  background-color: #4d4d4d;
+  border: 0;
+  box-shadow: none;
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  font-size: 11px;
+  height: 40px;
+  margin: 0;
+  opacity: 0.6;
+  padding: 0 20px;
+  text-decoration: none;
+  transition: all 100ms ease-out;
+}
+
+.button-primary img {
+  fill: #fff;
+  height: 15px;
+  margin-right: 8px;
+  width: 15px;
+}
+
+.button-primary--transparent {
+  background-color: transparent;
+}
+
+@media screen and (min-width: 350px) {
+  .button-primary img {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 500px) {
+  .button-primary {
+    font-size: 13px;
+    height: 50px;
+    opacity: 0.6;
+    padding: 0 20px;
+  }
+}
+
+.button-primary:hover, .button-primary:focus {
+  opacity: 1;
+}
+
+/*--------------------*/
+/*-----PRE-HEADER-----*/
+/*--------------------*/
+
+
+.pre-header {
+  background-color: #000;
+  height: 50px;
+}
+
+.pre-header .container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.pre-header__coords {
+  display: flex;
+}
+
+
+/*--------------------*/
+/*-----RESPONSIVE-----*/
+/*--------------------*/
+
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0px;
+}
+
+.main-header__menu  {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-right: 45px;
+  padding-top: 18px;
+}
+
+.panier {
+  padding-bottom: 10px;
+}
+
+.panier p {
+  line-height: 2px;
+  font-size: 12px;
+}
+
+.panier p:first-child {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.main-header__menu ul {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+}
+
+.main-header__menu img {
+  padding: 0;
+  width: 25px;
+}
+
+.main-header__menu li {
+  padding: 0 20px;  
+}
+
+.main-header__menu a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: black;
+}
+
+
+/*--------------------*/
+/*--------GRID--------*/
+/*--------------------*/
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows : 330px 330px 270px 400px;
+  grid-column-gap : 18px;
+  grid-row-gap : 18px;
+  padding-bottom: 100px;
+  grid-template-areas: 
+      "el1 el1 el1 el1 el2 el2 el3 el3" 
+      "el1 el1 el1 el1 el2 el2 el4 el4" 
+      "el5 el5 el5 el7 el7 el7 el7 el7"
+      "el6 el6 el6 el7 el7 el7 el7 el7";
+}
+
+.products-grid .el1 {
+  color:white;
+  background-image: url(../images/meubles/nouvellecollection.jpg);
+  background-size: cover;
+  background-position: 0% 0%;
+  grid-area: el1;
+}
+
+.el1 {
+  padding: 270px 20px 0 80px;
+}
+
+.el1txt p {
+  text-transform: uppercase;
+  background-color: rgb(82, 82, 82);
+  padding: 7px 0 7px 10px;
+  margin: 0 290px 0 0;
+  letter-spacing: 3px;
+  font-size: 12px;
+}
+
+.el1txt_1 p:first-child {
+  font-weight: bold;
+  margin: 0;
+  font-size: 60px;
+}
+
+.el1txt_1 p:last-child {
+  font-size: 50px;
+  font-weight: lighter;
+  margin: 0;
+}
+
+.el1txt_2 p {
+  font-size: 12px;
+  line-height: 20px;
+}
+
+.el1txt_3 p {
+  font-size: 30px;
+  margin: 20px 0 0 0;
+}
+
+.products-grid .el2 {
+  color:white;
+  background-image: url(../images/meubles/canape3places.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 23% 0%;
+  grid-area: el2;
+  height: 100%;
+}
+
+.el2 {
+  padding: 0px 0 0 22px;
+}
+
+.el2txt p {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  padding-top: 25px;
+}
+
+.el2txt_1 p {
+  font-weight: bold;
+  font-size: 26px;
+  line-height: 30px;
+}
+
+.el2txt_2 p {
+  text-transform: uppercase;
+  padding-top: 8px;
+}
+
+.el2txt_3 {
+  margin: 200px 0 0 0;
+  text-align: right;
+}
+
+.el2txt_3 p:first-child {
+  font-size: 18px;
+  margin: 0;
+  text-decoration: line-through;
+  padding: 0 0 5px 20px;
+}
+
+.el2txt_3 p:last-child {
+  font-size: 28px;
+  margin: 0;
+}
+
+.products-grid .el3 {
+  color:white;
+  background-image: url(../images/meubles/coussinsblancs.jpg);
+  background-size: 140%;
+  background-position: 25% 30%;
+  grid-area: el3;
+}
+
+.el3 {
+  padding: 30px 0 0 20px;
+}
+
+.el3txt p {
+  color: black;
+  font-weight: bold;
+  margin: 0;
+  line-height: 30px;
+}
+
+.el3txt p:first-child {
+  text-transform: uppercase;
+  font-size: 22px;
+  letter-spacing: 1px;
+}
+
+.el3txt p:last-child {
+  font-size: 20px;
+  letter-spacing: 2px;
+}
+
+.el3txt_1 {
+  margin: 110px 0 0 0;
+}
+
+.el3txt_1 p {
+  color: rgb(161, 0, 0);
+  font-size: 28px;
+  margin: 0;
+  padding: 10px 0 0 180px;
+}
+
+.el3txt_2 {
+  margin: 0 0 0 0;
+}
+
+.el3txt_2 p {
+  text-transform: uppercase;
+  font-size: 13px;
+  background-color: rgb(65, 65, 65);
+  margin: 10px 30px 0 0;
+  padding: 5px 0 5px 190px;
+}
+
+.products-grid .el4 {
+  color:white;
+  background-image: url(../images/meubles/chaise-accourdoirs.jpg);
+  background-size: 120%;
+  background-position: 0% -24%;
+  grid-area: el4;
+}
+
+.el4 {
+  padding: 10px 0 0 35px;
+}
+
+.el4txt p {
+  color: rgb(20, 22, 122);
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 20px;
+  letter-spacing: 2px;
+}
+
+.el4txt_1 p {
+  margin: 80px 0 0 0;
+}
+.el4txt_1 p:first-child {
+  color: rgb(151, 151, 151);
+  font-size: 18px;
+  text-decoration: line-through;
+}
+
+.el4txt_1 p:last-child {
+  color: rgb(20, 22, 122);
+  font-size: 26px;
+  margin: 0;
+}
+
+.el4txt_2 p {
+  color: rgb(20, 22, 122);
+  text-transform: uppercase;
+  margin-top: 30px;
+  font-size: 16px;
+  letter-spacing: -0.5px;
+}
+
+.products-grid .el5 {
+  grid-area: el5;
+  background-image: url(../images/meubles/ziodinning.jpg);
+  background-color: rgb(207, 236, 163);
+  background-size: 50px;
+  background-repeat: no-repeat;
+}
+
+.el5txt p {
+  margin: 0;
+}
+
+.el5txt p:last-child {
+  text-transform: uppercase;
+  font-size: 20px;
+  letter-spacing: 1px;
+  margin-top: 8px;
+}
+
+.el5txt_1 {
+  text-transform: uppercase;
+}
+
+.products-grid .el6{
+  color:white;
+  background-image: url(../images/meubles/totemfloor.jpg);
+  grid-area: el6;
+  background-position: 0% 90%;
+  height: 100%;
+}
+
+.el6txt p {
+  font-size: 12px;
+  letter-spacing: 4px;
+  color: rgb(70, 70, 70);
+  margin: 0;
+  padding: 30px 0 0 0px;
+}
+
+.el6txt_1 p {
+  text-transform: uppercase;
+  font-size: 22px;
+  letter-spacing: 1px;
+  color: rgb(70, 70, 70);
+  font-weight: bold;
+  margin-top: 6px;
+  padding: 0px 0 0 0px;
+}
+
+.el6txt_2 p {
+  text-transform: uppercase;
+  font-size: 13px;
+  color: rgb(119, 119, 119);
+  padding: 220px 0 0 0;
+}
+
+.products-grid .el7{
+  color:white;
+  background-image: url(../images/meubles/tabouret.jpg);
+  background-size: cover;
+  grid-area: el7;
+}
+
+.el7 {
+  padding: 70px 0 0 50px;
+}
+
+.el7txt p {
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: rgb(109, 109, 109);
+  margin: 0;
+  padding-bottom: 20px;
+}
+
+.el7txt_1 p:first-child {
+  color: rgb(70, 70, 70);
+  font-weight: bold;
+  font-size: 60px;
+  margin: 0;
+}
+
+.el7txt_1 p:last-child {
+  font-size: 60px;
+  font-weight: lighter;
+  color: rgb(109, 109, 109);
+  margin: 0;
+}
+
+.el7txt_2 {
+  color: rgb(109, 109, 109);
+  font-size: 14px;
+}
+
+/*--------------------*/
+/*---------1----------*/
+/*--------------------*/
+
+.products-selection__header {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 52px;
+  width: 32%;
+}
+
+.products-selection__header p {
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.nobold p {
+  font-weight: normal;
+}
+
+.changecolor {
+  color: #999999;
+}
+
+.products-list {
+  display: flex;
+  align-items: center;
+  padding-bottom: 30px;
+}
+
+.products-list ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.images1 {
+  background-image: url(../images/meubles/bombichair1.png);
+  background-size: cover;
+  width: 300px;
+  height: 300px;
+}
+
+.images2 {
+  background-image: url(../images/meubles/seater.png);
+  background-size: cover;
+  width: 300px;
+  height: 300px;
+}
+
+.images3 {
+  background-image: url(../images/meubles/chairarmrests.png);
+  background-size: cover;
+  width: 300px;
+  height: 300px;
+}
+
+.images3 p {
+  background-color: yellowgreen;
+  color: white;
+  top: 40px;
+  position: relative;
+  padding-top: 15px;
+  padding-right: 10px;
+  width: 50px;
+  height: 30px;
+  font-size: 20px;
+}
+
+.images4 {
+  background-image: url(../images/meubles/bombichair.png);
+  background-size: cover;
+  width: 300px;
+  height: 300px;
+}
+
+.products-list img {
+  width: 300px;
+  height: 300px;
+}
+
+.products-list p {
+  padding-left: 25px;
+  line-height: 15px;
+  font-weight: bold;
+}
+
+/*--------------------*/
+/*---------2----------*/
+/*--------------------*/
+
+.categories {
+  display: flex;
+  padding-bottom: 25px;
+
+}
+
+.categories ul {
+  display: flex;
+  width: 100%;
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.imagesmeubles { 
+  background-image: url("../images/meubles/horloges.png");
+  background-position: 75% 25%;
+  background-size: cover;
+  width: 466px;
+  height: 232px;
+}
+
+.txtmeubles1 {
+  line-height: 5px;
+  padding-top: 28px;
+  padding-left: 40px;
+}
+
+.txtmeubles1_1 {
+  padding-top: 70px;
+  padding-left: 40px;
+}
+
+.txtmeubles1 p:first-child {
+  color: rgb(139, 139, 139);
+  font-weight: inherit;
+  font-size: 15px;
+  letter-spacing: 3px;
+}
+
+.txtmeubles1 p:last-child {
+  font-size: 25px;
+  letter-spacing: 2px;
+  font-weight: bold;
+}
+
+.txtmeubles1_1 p {
+  font-size: 14px;
+  color: rgb(139, 139, 139);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.imagesmeubles2 { 
+  background-image: url("../images/meubles/tablebase.jpg");
+  background-position: 90% 72%;
+  background-size: 130%;
+  width: 466px;
+  height: 232px;
+}
+
+.txtmeubles2 {
+  line-height: 5px;
+  padding-top: 28px;
+  padding-left: 40px;
+}
+
+.txtmeubles2_2 {
+  padding-top: 70px;
+  padding-left: 40px;
+}
+
+.txtmeubles2 p:first-child {
+  color: rgb(139, 139, 139);
+  font-weight: inherit;
+  font-size: 15px;
+  letter-spacing: 3px;
+}
+
+.txtmeubles2 p:last-child {
+  font-size: 25px;
+  letter-spacing: 2px;
+  font-weight: bold;
+}
+
+.txtmeubles2_2 p {
+  font-size: 14px;
+  color: rgb(139, 139, 139);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.imagesmeubles3 { 
+  background-image: url("../images/meubles/lampes.png");
+  background-position: 20% 0%;
+  background-size: 145%;
+  background-repeat: no-repeat;
+  width: 466px;
+  height: 232px;
+}
+
+.txtmeubles3 {
+  line-height: 5px;
+  padding-top: 28px;
+  padding-left: 40px;
+}
+
+.txtmeubles3_3 {
+  padding-top: 70px;
+  padding-left: 40px;
+}
+
+.txtmeubles3 p:first-child {
+  color: white;
+  font-weight: inherit;
+  text-transform: uppercase;
+  font-size: 15px;
+  letter-spacing: 3px;
+}
+
+.txtmeubles3 p:last-child {
+  font-size: 25px;
+  letter-spacing: 2px;
+  font-weight: bold;
+  color: rgb(85, 85, 85);
+}
+
+.txtmeubles3_3 p {
+  font-size: 14px;
+  color: rgb(139, 139, 139);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.categories img {
+  width: 466px;
+  height: 232px;
+
+}
+
+/*--------------------*/
+/*---------3----------*/
+/*--------------------*/
+
+.s-titre2 {
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 26px;
+  width: 100%;
+  padding: 30px 0 20px 0;
+}
+
+.best-products {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 60px;
+}
+
+.best-products ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.best-products img {
+  width: 235px;
+  height: 235px;
+}
+
+.best-products p {
+  padding-left: 25px;
+  line-height: 15px;
+  font-weight: bold;
+}
+
+
+/*--------------------*/
+/*------PARTNERS------*/
+/*--------------------*/
+
+.partners {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.s-titre {
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 26px;
+}
+
+.img-part {
+  display: flex;
+  justify-content: space-between;
+  padding: 40px 0 60px 0;
+}
+
+/*--------------------*/
+/*----FIRST-FOOTER----*/
+/*--------------------*/
+
+footer {
+  background-color: #EFEFEF;
+  width: 100%;
+  height: 100%;
+  padding-bottom: 50px;
+}
+
+.advantages-footer {
+  padding: 50px 0;
+}
+
+.advantages-footer p:first-child {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.advantages-footer ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  line-height: 3px;
+  padding: 0;
+}
+
+.foot1 li {
+  display: flex;
+}
+
+.foot1 img {
+  height: 50px;
+  padding-right: 20px;
+}
+
+.barre {
+  padding-bottom: 30px;
+}
+
+span {
+  background: rgb(65, 65, 65);
+  width: 100%;
+  padding: 0 50%;
+  content: none;
+  font-size: 1px;
+}
+
+.main-footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.company-footer ul {
+  list-style-type: none;
+}
+
+.espace {
+  padding: 45px 0;
+}
+
+.company-footer img {
+  width: 200px;
+}
+
+.menu-footer li:first-child {
+  font-weight: bold;
+  padding-bottom: 30px;
+}
+
+.menu-footer li {
+  line-height: 50px;
+}
+
+.menu-footer ul {
+  list-style-type: none;
+}
+
+/*--------------------*/
+/*--------NEWS--------*/
+/*--------------------*/
+
+.newsletter-footer {
+  display: flex;
+  padding: 35px 0 50px 0;
+}
+
+.newsletter-footer div {
+  display: flex;
+  padding-top: 40px;
+}
+
+.newss {
+  display: flex;
+  flex-direction: column;
+  margin-right: 15px;
+}
+
+#news1 {
+  font-weight: bold;
+  text-align: right;
+}
+
+#news2 {
+  padding: 45px 0 20px 0;
+  font-weight: bold;
+  text-align: right;
+}
+
+input[type=email] {
+  border: none;
+  border-radius: 30px 0px 0px 30px;
+  font-size: 15px;
+  padding: 15px 0px 15px 30px;
+  width: 160px;
+}
+
+input[type=button] {
+  border: none;
+  border-radius: 0px 30px 30px 0px;
+  font-size: 15px;
+  color: white;
+  padding: 15px 0 15px 0;
+  background-color: rgb(121, 121, 121);
+  width: 100px;
+}
+
+.newsletter-footer {
+  display: flex;
+  flex-direction: column;
+}
+
+.follow {
+  display: flex;
+  flex-direction: column;
+}
+
+.follow div {
+  margin-left: 90px;
+}
+
+.follow img {
+  width: 20px;
+  padding-left: 10px;
+}
+
+/*--------------------*/
+/*-------FOOTER-------*/
+/*--------------------*/
+
+.container-footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.sub-footer__copyright {
+  display: flex;
+  padding: 30px 0 40px 0;
+  font-size: 14px;
+}
+
+.sub-footer__copyright div {
+  font-weight: bold;
+}
+
+.sub-footer__payments {
+  padding-top: 26px;
+}
+
+.sub-footer__payments img {
+  margin-right: 12px;
+  width: 30px;
+  height: 30px;
+}
