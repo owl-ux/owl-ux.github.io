@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    
+    <script type="text/javascript" src="script/jspdf.js"></script>
+    <script type="text/javascript" src="script/jspdf.debug.js"></script>
+    
+    <title>Relevé de notes</title>
+    
+    <link href="style/style.css" rel="stylesheet" type="text/css"/>
+</head>
+
+<body onload="focus()">
+<div id="main">
+    <table class="timecard">
+        <caption>
+            NOM <input type="text" id="nom" oninput="maj(nom)">
+            Prénom<input type="text" id="prenom" oninput="maj(prenom)">
+
+            <script type="text/javascript">
+				function focus(){
+					document.getElementById("nom").focus();
+				}
+			</script>
+
+        </caption>
+        
+              
+        <thead>
+        <tr>
+            <th id="spe1" colspan="2"><a href=" "/>Spécialité de Première</th>
+            <th id="spe2" colspan="2"><a href=" "/>Specialité 1 de Terminale</th>
+            <th id="spe3" colspan="2"><a href=" "/>Specialité 2 de Terminale</th>
+          
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <th class="matiere">Art</th>
+            <td class="bouton"><input type='radio' name="spe_première" id='Art1' value='Art' onclick="gestion_radio('spe_première',2,3);"></td>
+            <th class="matiere">Art</th>
+            <td class="bouton"><input type='radio' name="spe1_terminale" id='Art2' value='Art' onclick="gestion_radio('spe1_terminale',1,3);"></td>
+            <th class="matiere">Art</th>
+            <td class="bouton"><input type='radio' name="spe2_terminale" id='Art3' value='Art' onclick="gestion_radio('spe2_terminale',1,2);"></td>
+        </tr>
+        <tr>
+            <th class="matiere">Écologie, agronomie et territoires</th>
+            <td class="bouton" ><input type='radio' name="spe_première" id='Ecologie1' value='Ecologie' onclick="gestion_radio('spe_première',2,3);"></td>
+            <th class="matiere">Écologie, agronomie et territoires</th>
+            <td class="bouton"><input type='radio' name="spe1_terminale" id='Ecologie2' value='Ecologie' onclick="gestion_radio('spe1_terminale',1,3);"></td>
+            <th class="matiere">Écologie, agronomie et territoires</th>
+            <td class="bouton"><input type='radio' name="spe2_terminale" id='Ecologie3' value='Ecologie' onclick="gestion_radio('spe2_terminale',1,2);"></td>
+        </tr>
+        <tr>
+            <th class="matiere">Histoire géographie, géopolitique et sciences politique</th>
+            <td class="bouton"><input type='radio' name="spe_première" id='Histoire1' value='Histoire' onclick="gestion_radio('spe_première',2,3);"></td>
+            <th class="matiere">Histoire géographie, géopolitique et sciences politique</th>
+            <td class="bouton"><input type='radio' name="spe1_terminale" id='Histoire2' value='Histoire' onclick="gestion_radio('spe1_terminale',1,3);"></td>
+            <th class="matiere">Histoire géographie, géopolitique et sciences politique</th>
+            <td class="bouton"><input type='radio' name="spe2_terminale"  id='Histoire3' value='Histoire' onclick="gestion_radio('spe2_terminale',1,2);"></td>
+        </tr>
+        <tr>
+            <th class="matiere">Humanités, littérature et philosophie</th>
+            <td class="bouton"><input type='radio' name="spe_première" id='Humanites1' value='Humanites' onclick="gestion_radio('spe_première',2,3);"></td>
+            <th class="matiere">Humanités, littérature et philosophie</th>
+            <td class="bouton"><input type='radio' name="spe1_terminale" id='Humanites2' value='Humanites' onclick="gestion_radio('spe1_terminale',1,3);"></td>
+            <th class="matiere">Humanités, littérature et philosophie</th>
+            <td class="bouton"><input type='radio' name="spe2_terminale" id='Humanites3' value='Humanites' onclick="gestion_radio('spe2_terminale',1,2);"></td>
+        </tr>
+        <tr>
+            <th class="matiere">Langues et littératures étrangères</th>
+            <td class="bouton"><input type='radio' name="spe_première" id='Langue1' value='Langue' onclick="gestion_radio('spe_première',2,3);"></td>
+            <th class="matiere">Langues et littératures étrangères</th>
+            <td class="bouton"><input type='radio' name="spe1_terminale" id='Langue2' value='Langue' onclick="gestion_radio('spe1_terminale',1,3);"></td>
+            <th class="matiere">Langues et littératures étrangères</th>
+            <td class="bouton"><input type='radio' name="spe2_terminale" id='Langue3' value='Langue' onclick="gestion_radio('spe2_terminale',1,2);"></td>
+        </tr>
+        <tr>
+            <th class="matiere">Mathématiques</th>
+            <td class="bouton"><input type='radio' name="spe_première" id='Mathematiques1' value='Mathematiques' onclick="gestion_radio('spe_première',2,3);"></td>
+            <th class="matiere">Mathématiques</th>
+            <td class="bouton"><input type='radio' name="spe1_terminale" id='Mathematiques2' value='Mathematiques' onclick="gestion_radio('spe1_terminale',1,3);"></td>
+            <th class="matiere">Mathématiques</th>
+            <td class="bouton"><input type='radio' name="spe2_terminale" id='Mathematiques3' value='Mathematiques' onclick="gestion_radio('spe2_terminale',1,2);"></td>
+        </tr>
+         <tr>
+            <th class="matiere">Numérique et sciences informatiques</th>
+            <td class="bouton"><input type='radio' name="spe_première" id='Numeriques1' value='Numeriques' onclick="gestion_radio('spe_première',2,3);"></td>
+            <th class="matiere">Numérique et sciences informatiques</th>
+            <td class="bouton"><input type='radio' name="spe1_terminale" id='Numeriques2' value='Numeriques' onclick="gestion_radio('spe1_terminale',1,3);"></td>
+            <th class="matiere">Numérique et sciences informatiques</th>
+            <td class="bouton"><input type='radio' name="spe2_terminale" id='Numeriques3' value='Numeriques' onclick="gestion_radio('spe2_terminale',1,2);"></td>
+        </tr>
+         <tr>
+            <th class="matiere">SVT (sciences de la vie et de la terre)</th>
+            <td class="bouton"><input type='radio' name="spe_première" id='SciencesVie1' value='SciencesVie' onclick="gestion_radio('spe_première',2,3);"></td>
+            <th class="matiere">SVT (sciences de la vie et de la terre)</th>
+            <td class="bouton"><input type='radio' name="spe1_terminale" id='SciencesVie2' value='SciencesVie' onclick="gestion_radio('spe1_terminale',1,3);"></td>
+            <th class="matiere">SVT (sciences de la vie et de la terre)</th>
+            <td class="bouton"><input type='radio' name="spe2_terminale" id='SciencesVie3' value='SciencesVie' onclick="gestion_radio('spe2_terminale',1,2);"></td>
+        </tr>
+         <tr>
+            <th class="matiere">Sciences de l’ingénieur</th>
+            <td class="bouton"><input type='radio' name="spe_première" id='Ingenieur1' value='Ingenieur' onclick="gestion_radio('spe_première',2,3);"></td>
+            <th class="matiere">Sciences de l’ingénieur</th>
+            <td class="bouton"><input type='radio' name="spe1_terminale" id='Ingenieur2' value='Ingenieur' onclick="gestion_radio('spe1_terminale',1,3);"></td>
+            <th class="matiere">Sciences de l’ingénieur</th>
+            <td class="bouton"><input type='radio' name="spe2_terminale" id='Ingenieur3' value='Ingenieur' onclick="gestion_radio('spe2_terminale',1,2);"></td>
+        </tr>
+         <tr>
+            <th class="matiere">Sciences économiques et sociales</th>
+            <td class="bouton"><input type='radio' name="spe_première" id='EcoSocial1' value='EcoSocial' onclick="gestion_radio('spe_première',2,3);"></td>
+            <th class="matiere">Sciences économiques et sociales</th>
+            <td class="bouton"><input type='radio' name="spe1_terminale" id='EcoSocial2' value='EcoSocial' onclick="gestion_radio('spe1_terminale',1,3);"></td>
+            <th class="matiere">Sciences économiques et sociales</th>
+            <td class="bouton"><input type='radio' name="spe2_terminale" id='EcoSocial3' value='EcoSocial' onclick="gestion_radio('spe2_terminale',1,2);"></td>
+        </tr>
+         <tr>
+            <th class="matiere">Physique chimie</th>
+            <td class="bouton"><input type='radio' name="spe_première" id='SPC1' value='SPC' onclick="gestion_radio('spe_première',2,3);"></td>
+            <th class="matiere">Physique chimie</th>
+            <td class="bouton"><input type='radio' name="spe1_terminale" id='SPC2' value='SPC' onclick="gestion_radio('spe1_terminale',1,3);"></td>
+            <th class="matiere">Physique chimie</th>
+            <td class="bouton"><input type='radio' name="spe2_terminale" id='SPC3' value='SPC' onclick="gestion_radio('spe2_terminale',1,2);"></td>
+        </tr>
+        
+        
+        </tbody>
+        
+    </table>
+    <table class="timecard">
+        <caption>
+            Epreuves communes de contrôle continu
+        
+        </caption>
+        
+        <tbody>
+           <tr id='entete'>
+            <td >Matière</td>
+            <td>Note</td>
+            <td>Coef</td>
+            <td >Matière</td>
+            <td>Note</td>
+               <td>Coef</td>
+            
+            </tr>
+            
+        <tr>
+            <th class='col1'>Bulletin de Première</th>
+            <td><input type='text' id='note1' value="11" maxlength="2" onkeypress="blocage();" onclick="compt_clic('note1');"></td>
+            <td><input type='text' value="5" disabled></td>
+            <th class='col1'>Bulletin de Terminale</th>
+            <td><input type='text' id='note2' value="11" maxlength="2" onkeypress="blocage();" onclick="compt_clic('note2');"></td>
+            <td><input type='text' value="5" disabled></td>
+            
+        </tr>
+         <tr>
+            <th class='col1'>Histoire-géographie</th>
+            <td><input type='text' id='note3' value="13" maxlength="2" onkeypress="blocage();" onclick="compt_clic('note3');"></td>
+            <td><input type='text' value="5" disabled></td>
+            <th class='col1'>EPS</th>
+            <td><input type='text' id='note4' value="16" maxlength="2" onkeypress="blocage();" onclick="compt_clic('note4');"></td>
+            <td><input type='text' value="5" disabled></td>
+            
+        </tr>
+         <tr>
+            <th class='col1'>Langue vivante A</th>
+            <td><input type='text' id='note5' value="13" maxlength="2" onkeypress="blocage();" onclick="compt_clic('note5');"></td>
+            <td><input type='text' value="5" disabled></td>
+            <th class='col1'>Langue vivante B</th>
+            <td><input type='text' id='note6' value="11" maxlength="2" onkeypress="blocage();" onclick="compt_clic('note6');"></td>
+            <td><input type='text' value="5" disabled></td>
+            
+        </tr>
+          <tr>
+            <th class='col1' id='spe_première'>Enseignement de spécialité 1</th>
+            <td><input type='text' id='note7' value="09" maxlength="2" onkeypress="blocage();" onclick="compt_clic('note7');"></td>
+            <td><input type='text' value="5" disabled></td>
+            <th class='col1'>Enseignement scientifique</th>
+            <td><input type='text' id='note8' value="13" maxlength="2" onkeypress="blocage();" onclick="compt_clic('note8');"></td>
+            <td><input type='text' value="5" disabled></td>
+            
+        </tr>
+        </tbody>
+        
+    </table>
+    <table class="timecard">
+        <caption>
+           Epreuves Terminales
+        </caption>
+        <tbody>
+        <tr>
+            <th class='col1'>Epreuve anticipée de Français écrit</th>
+            <td><input type='text' id='note9' value="08" maxlength="2" onkeypress="blocage();" onclick="compt_clic('note9');"></td>
+            <td><input type='text' value="5" disabled></td>
+            <th class='col1'>Epreuve anticipée de Français oral</th>
+            <td><input type='text' id='note10' value="12" maxlength="2" onkeypress="blocage();" onclick="compt_clic('note10');"></td>
+            <td><input type='text' value="5" disabled></td>
+            
+        </tr>
+         <tr>
+            <th class='col1'>Philosophie</th>
+            <td><input type='text' id='note11' value="14" maxlength="2" onkeypress="blocage();" onclick="compt_clic('note11');"></td>
+            <td><input type='text' value="8" disabled></td>
+            <th class='col1'>Grand oral</th>
+            <td><input type='text' id='note12' value="16" maxlength="2" onkeypress="blocage();" onclick="compt_clic('note12');"></td>
+            <td><input type='text' value="10" disabled></td>
+            
+        </tr>
+         <tr>
+            <th class='col1' id="specialite_terminale1">Enseignement de spécialité 1</th>
+            <td><input type='text' id='note13' value="11" maxlength="2" onkeypress="blocage();" onclick="compt_clic('note13');"></td>
+            <td><input type='text' value="16" disabled></td>
+            <th class='col1' id='specialite_terminale2'>Enseignement de spécialité 2</th>
+            <td><input type='text' id='note14' maxlength="2" onkeypress="blocage();" onclick="compt_clic('note14');"></td>
+            <td><input type='text' value="16" disabled></td>
+            
+        </tr>
+       
+        </tbody>
+        
+    </table>
+<table class="timecard">
+        <caption>
+           Résultats
+            
+        </caption>
+        <thead>
+        <tr>
+            <th class="result" >Nombre de points</th>
+            <th class="result" >Moyenne</th>
+            <th class="result" >Mention</th>
+          
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <th class="result" ><input type="text" value="" id='total' disabled></th>
+            <th class="result" ><input type="text" value="" id="moyenne" disabled></th>
+            <th class="result" id="mention" ></th>
+            
+        </tr>
+        <tr>
+            <th class="result" onclick="verif();"><a >calculer</a></th>
+            <!--<th class="result" onclick="print();"><a id='imp'>imprimer</a></th>-->
+            <th class="result" ><a id='imp' onclick="print()">imprimer</a></th>
+            <th class="result" onclick="raz_champ();"><a id='res'>reset</a></th>
+            
+        </tr>
+       
+        </tbody>
+        
+    </table>
+    
+</div>
+    
+<script type="text/javascript" src="script/script.js">
+</script>    
+</body>
+
+
+</html>
